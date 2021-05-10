@@ -1,0 +1,45 @@
+#Finding the mode of the list of 10 temprature values in python.
+# A list containing average daily temperature over 10 days
+temperatures = [34, 40, 29, 33, 42, 40, 39, 34, 34,33 ]
+# Step 1 : Find the unique set of values. Store this in a list
+unique_temperatures = list(set(temperatures))
+# Step 2 : Create an empty dictionary which will contain the unique temperatures as keys and their counts as values
+temp_dict = {}
+# Set the values for each key separately
+# First key
+first_key = unique_temperatures[0]
+temp_dict[first_key] = temperatures.count(first_key)
+
+# Second key
+second_key = unique_temperatures[1]
+temp_dict[second_key] = temperatures.count(second_key)
+
+# Third key
+third_key = unique_temperatures[2]
+temp_dict[third_key] = temperatures.count(third_key)
+
+# Fourth key
+fourth_key = unique_temperatures[3]
+temp_dict[fourth_key] = temperatures.count(fourth_key)
+
+# Fifth key
+fifth_key = unique_temperatures[4]
+temp_dict[fifth_key] = temperatures.count(fifth_key)
+
+# Sixth key
+sixth_key = unique_temperatures[5]
+temp_dict[sixth_key] = temperatures.count(sixth_key)
+
+# Step 3: Store the dictionary values in a list
+temp_dict_frequencies = list(temp_dict.values())
+
+# Find the index of the most frequent temperature value
+most_frequent_temp_index = temp_dict_frequencies.index(max(temp_dict_frequencies))
+
+# Step 4 : Create the list of dictionary keys
+temp_dict_keys = list(temp_dict.keys())
+
+# Calculate the mode temperature
+mode_temp = temp_dict_keys[most_frequent_temp_index]
+
+print(mode_temp)
